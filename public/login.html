@@ -12,16 +12,42 @@
 </head>
 
 <body>
-    <div id="login">
-        <h1 id="login_heading">Login</h1>
-        <form id="login_form">
-            Email: <input type="text" id="login_email"></br>
-            Password: <input type="password" id="login_password">
-        </form>
-        <button id="login_button" onclick="login()">Submit</button>
-        <button id="register_button" onclick="location.href='register.html'">Register</button>
-        </br>
-    </div>
+    <span id="container">
+        <span id="forewords">
+            <h1 id="login_heading">Welcome to the SSC X BREED Hackathon</h1>
+        </span>
+        <div id="login">
+            <form class="login_form">
+                <div class="login_fields">
+                    <label class="input_underline">
+                        <input required class="login_input" type="text" id="login_email">
+                        <span class="input_label">Email</span>
+                        <span id="email_err" class="err_message">Error</span>
+                    </label>
+                </div>
+
+                <div class="login_fields">
+                    <label class="input_underline">
+                        <input required class="login_input" type="password" id="login_password">
+                        <span class="input_label">Password</span>
+                        <span id="pwd_err" class="err_message">Error</span>
+                    </label>
+                </div>
+            </form>
+            <div class="button_field">
+                <span>
+                    <button class="btn" id="login_button" onclick="login()">Log in</button>
+                </span>
+                <span>
+                    Need an account?
+                    <button class="btn_sec" id="register_button" onclick="location.href='register.html'">Sign
+                        up</button>
+                </span>
+            </div>
+            </br>
+        </div>
+        <button class="btn_sec" onclick="forgotpwd()"> Forgot password?</button>
+    </span>
 
 </body>
 

@@ -12,14 +12,46 @@
 </head>
 
 <body>
-    <div id="login">
-        <h1 id="register_heading">Register</h1>
-        <form>
-            Email: <input type="text" id="register_email"></br>
-            Password: <input type="text" id="register_password"></br>
-            Confirm Password: <input type="text" id="register_password_confirm"></br>
+    <div id="register">
+        <span id="forewords">
+            <h1 id="register_heading">Join the SSC X BREED Hackathon!</h1>
+            <p>Please use your <b>school email</b> to sign up</p>
+        </span>
+        <form class="login_form">
+            <div class="login_fields">
+                <label class="input_underline">
+                    <input required class="login_input" type="text" id="register_email">
+                    <span class="input_label">Email</span>
+                    <span id="email_err" class="err_message">Error</span>
+                </label>
+            </div>
+
+            <div class="login_fields">
+                <label class="input_underline">
+                    <input required class="login_input" type="password" id="register_password">
+                    <span class="input_label">Password</span>
+                    <span id="pwd_err" class="err_message">Error</span>
+                </label>
+            </div>
+
+            <div class="login_fields">
+                <label class="input_underline">
+                    <input required class="login_input" type="password" id="register_password_confirm">
+                    <span class="input_label">Confirm Password</span>
+                    <span id="pwd_con_err" class="err_message">Error</span>
+                </label>
+            </div>
+
         </form>
-        <button id="register_button" onclick="register()">Submit</button>
+        <div class="button_field">
+            <span>
+                <button class="btn" id="register_button" onclick="register()">Sign up</button>
+            </span>
+            <span>
+                Already have an account?
+                <button class="btn_sec" id="login_button" onclick="location.href='login.html'">Log in</button>
+            </span>
+        </div>
         </br>
     </div>
 </body>
